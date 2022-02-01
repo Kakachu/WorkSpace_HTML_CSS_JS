@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+
+        <style>
+            .formLogin{
+                width: 250px;
+                margin: 50px auto;
+            }
+
+            .formLogin fieldset{
+                background: #ccc;
+            }
+
+            .formLogin label{
+                display: block;
+                margin-top: 35px;
+            }
+            
+            .formLogin legend{
+                margin: auto;
+                display: inline-block;
+                padding: 10px;
+                background: white;
+                border: 1px solid;
+            }
+
+            #user, #pass, .btn{
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 5px;
+                font-size: 18px;
+                font-family: sans-serif;
+                border: none;
+            }
+
+            .btn{
+                margin-top: 15px;
+            }
+
+            #user{
+                margin-bottom: 15px;
+            }
+
+            #user, #pass{
+                background: rgb(223, 223, 223);
+            }
+
+            #user:focus, #pass:focus{
+                background: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de formulário</h1>
+
+        <form action="#" method="POST" class="formLogin">
+            <fieldset>
+                <legend>Login</legend>
+
+                <label for="user">Digite o usuario</label>
+                <input type="text" id="user" name="user" autofocus></input>
+
+                <label for="pass">Digite a senha</label>
+                <input type="password" id="pass" name="pass"></input>
+
+                <input type="submit" value="logar" class="btn"></input>
+            </fieldset>
+        </form>
+    </body>
+</html>

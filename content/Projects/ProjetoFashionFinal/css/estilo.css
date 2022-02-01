@@ -1,0 +1,158 @@
+body{
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#principal{
+    margin: auto;
+    width: 1024px;
+}
+
+/*header início*/
+
+.hero nav ul{
+    text-align: right;
+    margin: 20px 0 0 0;
+    padding-right: 50px;
+    background-color: #162028;
+}
+
+.hero nav li{
+    display: inline-block;
+    color: white;
+}
+
+.hero nav a{
+    display: block;
+    padding: 20px;
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color .3s linear;
+}
+
+.hero nav a:hover{
+    color: white;
+}
+
+.logo{
+    margin: 5px 0 0 135px;
+    position: absolute;
+}
+/*header fim*/
+/*-------------------------------------------------------------------------*/
+/*conteúdo header início*/
+.hero-content{
+    text-align: center;
+    padding: 50px 100px;
+}
+
+.hero-content h1{
+    font-size: 36px;  
+    color: #252525;  
+}
+
+.hero-content p{
+    font-size: 16px;
+    line-height: 2;
+    color: #555;  
+}
+/*conteúdo header fim*/
+/*--------------------------------------------------------------*/
+/*cards início*/
+
+.section-cards{
+    color: #555;
+    padding: 0 100px 50px 100px;
+    overflow: auto;
+}
+
+.card{
+    width: 32%;
+    float: left;
+    text-align: center;
+}
+
+.card-title{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*cards fim*/
+/*------------------------------------------------------------------*/
+/*detalhe início*/
+.detail{
+    background-color: #003d52;
+    background-image:url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 100px;
+    color: white;
+}
+
+.detail h2{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+.detail p{
+    width: 70%;
+    line-height: 1.5;
+}
+
+/*detalhe fim*/
+/*------------------------------------------------------------------*/
+/*contato início*/
+.contact p{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0,61,82,255);
+    margin-bottom: 80px;
+    font-style: bold;
+    font-size: 20px;
+}
+
+.contact{
+    margin: 50px 0;
+}
+
+.contact address{
+    color: #143f52;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.maps{
+    width: 100%;
+    height: 450px;
+    margin-top: 30px;
+}
+
+.maps iframe{
+    width: 100%;
+}
+
+/*contato fim*/
+/*------------------------------------------------------------------*/
+/*footer início*/
+.footer{
+    color: #6f8597;
+    Background-color: #0b171f;
+    height: 80px;
+	font-size: 14px;
+    text-align: center;
+	text-shadow: 2px 2px 2px black;
+    line-height: 80px;
+    margin-top: 30px;
+}
+/*footer fim*/

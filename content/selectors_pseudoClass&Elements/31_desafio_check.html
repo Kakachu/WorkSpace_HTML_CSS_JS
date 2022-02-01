@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="tecnologia">
+
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+
+            .chk{
+                display: inline-block;
+                background: #ddd;
+                width: 60px;
+                height: 30px;
+                margin-right: 10px;
+                border-radius: 15px;
+                position: relative;
+            }
+
+            input[type="checkbox"] + label .chk::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 4px;
+                border: 10px solid white;
+                box-sizing: border-box;
+                border-radius: 10px;
+
+                transition-property: left;
+                transition-duration: .1s;
+                transition-timing-function: linear;
+            }
+
+            input[type="checkbox"]:checked + label .chk::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 35px;
+                border: 10px solid red;
+                box-sizing: border-box;
+                border-radius: 10px;
+                
+                transition-property: left;
+                transition-duration: .1s;
+                transition-timing-function: linear;
+            }
+
+            input[type="checkbox"]{
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                visibility: hidden;
+                display: inline-block;
+                margin: 0;
+            }
+            
+
+            label{
+                display: inline-block;
+                height: 15px; 
+                margin-right: 100px;
+            }
+
+            input[type="checkbox"]:focus + span{
+                box-shadow: 0 0 0 1px red;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <input type="checkbox" name="qq" id="cod">
+        <label for="cod"><span class="chk"></span><sub>COD BO2</sub></label>
+
+        <input type="checkbox" name="qq" id="mine">
+        <label for="mine"><span class="chk"></span><sub>Minecraft</sub></label>
+
+        <input type="checkbox" name="qq" id="lol">
+        <label for="lol"><span class="chk"></span><sub>LOL</sub></label>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="tecnologia">
+
+        <style>
+            div{
+                border: 3px solid red;
+                padding: 25px;
+            }
+
+            div:before{
+                content: "before: ";
+                background: #ccc;
+            }
+
+            div:after{
+                content: "";
+                background: red;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div> texto principal da div</div>
+
+        <article>
+            <h3>
+                titulo
+            </h3>
+            <p> paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p> paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p> paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+
+        <ul>
+            <li><a href="#">link falso</a></li>
+            <li><a href="#">link falso</a></li>
+            <li><a href="http://serfrontend.com" target="blank">link externo</a></li>
+            <li><a href="http://serfrontend.pdf" target="blank">link externo</a></li>
+                <li><a href="23_transition.html" title="veja aula interior">link interno</a></li>
+
+        </ul>
+    </body>
+</html>
