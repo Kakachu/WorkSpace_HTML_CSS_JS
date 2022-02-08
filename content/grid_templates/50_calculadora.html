@@ -1,0 +1,97 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="tecnologia">  
+        
+        <style>
+
+            body{
+                font-family: sans-serif;
+            }
+
+            #calculator{
+                width: 16em;
+                height: 24em;
+                background-image: linear-gradient( to bottom, rgb(199, 199, 199), rgb(136, 136, 136));
+                box-shadow: 0 0 4px 3px rgb(165, 165, 165);
+
+                margin: 50px auto;
+                padding: 1em;
+                border-radius: 10px;
+                border: 1px solid rgb(145, 145, 145);
+
+                display: grid;
+                grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+                grid-template-rows: repeat(6, [row-start] 1fr [row-end]); 
+                grid-gap: 10px;
+        
+            }
+
+            button{
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            button:hover{
+                background: #ccc;
+            }
+
+            #display{
+                border-bottom: 2px solid #bbb;
+                border-right: 2px solid #bbb;
+                border-top: 2px solid white;
+                border-left: 2px solid white;
+                width: 16em;
+
+                background-image: linear-gradient( to bottom, #ccc, #efefef);
+                grid-column: col-start 1 / col-end 4;
+            }
+
+            #display p{
+                text-align: right;
+                padding: 0;
+                margin-right: 10px;
+                margin-top: 10px;
+                font-size: 1.5em;
+                height: .45em;
+            }
+
+            .mais{
+                grid-column: col-start 4 / col-end 4;
+                grid-row: row-start 5 / row-end 6;
+            }
+
+            .zero{
+                grid-column: col-start 1 / col-end 2;
+            }
+
+            .mais, .zero{
+                background: rgb(172, 172, 172);
+
+                border-bottom: 2px solid rgb(128, 128, 128);
+                border-right: 2px solid rgb(128, 128, 128);
+                border-top: 2px solid white;
+                border-left: 2px solid white;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="calculator">
+            <div id="display"><p>0</p></div>
+
+                <button>AC</button> <button>%</button> <button>x</button> <button>/</button> 
+                <button>7</button> <button>8</button> <button>9</button> <button>=</button> 
+                <button>4</button> <button>5</button> <button>6</button> <button>-</button>
+                <button>1</button> <button>2</button> <button>3</button> <button class="mais">+</button>
+                <button class="zero">0</button> <button>,</button>
+            
+        </div>
+    </body>
+</html>
