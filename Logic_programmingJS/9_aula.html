@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Logica de programação com Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+        <script>
+            var produtos = new Array('caneta', 'lapis', 'tesoura', 'borracha', 'caderno', 'livro');
+
+            var output = document.querySelector('#output')
+
+            produtos.push('compasso', 'cartolina')
+
+            var msg = '';
+            for (var i = 0; i < produtos.length; i++){
+                msg += 'produto ' + (i + 1) + ": " + produtos[i] + '<br>';
+            }
+
+            output.innerHTML = msg;
+        </script>
+    </body>
+</html>

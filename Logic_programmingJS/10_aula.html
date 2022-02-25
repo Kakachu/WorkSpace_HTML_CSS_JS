@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Logica de programação com Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+        <script>
+            var produto1 = new Object() ;
+            produto1.nome = "caneta";
+            produto1.estoque = 10;
+            produto1.preco = 2.2;
+
+            produto1.comprar = function(qnt){
+                if(!qnt){
+                    qtd = 1;
+                }
+
+                console.log('comprou caneta');
+                this.estoque = this.estoque - qnt;
+                console.log(this.estoque);
+            }
+
+            var msg = '';
+            msg += 'nome: ' + produto1.nome + '<br>';
+            msg += 'preco: ' + produto1.preco + '<br>';
+            msg += 'estoque: ' + produto1.estoque + '<br>';
+
+            document.querySelector('#output').innerHTML = msg;
+        </script>
+    </body>
+</html>

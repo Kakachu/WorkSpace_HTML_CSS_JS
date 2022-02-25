@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Logica de programação com Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+        <script>
+            var pessoas = [
+                {"nome": 'kauã', "email": 'k@gmail.com'}, 
+                {"nome": 'biac', "email": 'b@hotmail.com'} ,
+                {"nome": 'schw', "email": 's@gmail.com'}
+            ]
+
+            var msg = "";
+
+            for(var i = 0; i < pessoas.length; i++){
+                msg +=  ("nome: " + pessoas[i].nome + "---email: " + pessoas[i].email + '<br>');
+            }
+            
+
+
+            document.querySelector('#output').innerHTML = msg;
+        </script>
+    </body>
+</html>

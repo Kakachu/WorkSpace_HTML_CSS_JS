@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Logica de programação com Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+            var soma = 0;
+            for(i = 0; i < arr.length; i++){
+                if(arr[i] % 2 == 0){
+                    soma += arr[i];
+                }
+            }
+
+            alert("a soma de todos os pares = " + soma);
+        </script>
+    </body>
+</html>
