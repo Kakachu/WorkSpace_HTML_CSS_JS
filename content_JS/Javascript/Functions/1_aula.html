@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Logica de programação com Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            function Somar(n1, n2) {
+                return(n1 + n2);
+            }
+
+            var soma = Somar(10, 20);
+            console.log("soma = ", soma);
+
+            var teste = function abacate(f){
+                f();
+            };
+
+            teste(function(){
+                console.log("funçao passada por parametros");
+            });
+
+            console.log("-------------------------------------");
+
+            var x = 0;
+            var y;
+            function mostraX(){
+                var x = 10; //escopo local
+                var y = 0; //escopo local
+                z = 20; //escopo global
+
+                console.log("x dentro = " + x);
+                console.log("y dentro = " + y);
+                console.log("z dentro = " + z);
+            }
+            mostraX();
+
+            console.log("x fora = " + x);
+            console.log("y fora = " + y);
+            console.log("z fora = " + z);
+
+
+            //IFEE
+            (function(){
+                var isValid = false;
+            })()
+
+            //console.log(isValid) <--- Uncaught ReferenceError: isValid is not defined
+
+    
+        </script> 
+    </body>
+</html>
