@@ -47,14 +47,32 @@
             console.log("z fora = " + z);
 
 
-            //IFEE
+            //IIFE
             (function(){
+                'use strict'
                 var isValid = false;
-            })()
+                console .log(isValid);
+            
 
             //console.log(isValid) <--- Uncaught ReferenceError: isValid is not defined
 
     
+            function somarr(){
+                console.log(arguments);
+                var result = 0;
+                var x = 0;
+
+                while(arguments[x]){
+                    result += arguments[x];    
+                    x++;
+                }
+
+                console.log('result: ', result);
+            }
+            somarr(20, 20, 10, 30);
+
+        })();
+            
         </script> 
     </body>
 </html>

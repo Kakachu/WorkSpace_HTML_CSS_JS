@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Logica de programação com Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            (function(){
+
+                'use strict'
+
+                // Função irá calcular seu IMC
+                function calculaIMC(peso, altura){
+                    return(peso / (altura ^ 2))
+                }
+
+                // Função irá retornar sua classificação no IMC 
+                function classificacao(imc){
+                    if(imc <= 16.9){
+                        return('seu imc = ' + imc + ' muito abaixo do peso')
+                    }
+                    else if(imc <= 18.4){
+                        return('seu imc = ' + imc + ' abaixo do peso')
+                    }
+                    else if(imc <= 24.9){
+                        return('seu imc = ' + imc + ' peso normal')
+                    }
+                    else if(imc <= 29.9){
+                        return('seu imc = ' + imc + ' acima do peso')
+                    }
+                    else if(imc <= 34.9){
+                        return('seu imc = ' + imc + ' Obesidade Grau I')
+                    }
+                    else if(imc <= 40){
+                        return('seu imc = ' + imc + ' Obesidade Grau II')
+                    }
+                    else if(imc > 40){
+                        return('seu imc = ' + imc + ' Obesidade Grau III')
+                    }
+                    else{
+                        return('digite um valor possível')
+                    }
+                }
+
+                var peso = parseFloat(prompt('digite seu peso: '));
+                var altura = parseFloat(prompt('digite sua altura: '));
+                var imc =  calculaIMC(peso, altura);
+
+                alert(classificacao(imc));
+
+            })();
+            
+        </script>
+    </body>
+</html>
