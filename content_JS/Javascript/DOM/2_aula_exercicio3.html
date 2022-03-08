@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <input type="text" id="textNome" value="">
+        <button onclick="escreve()">Enviar</button>
+        <div id="msg"><b id="negrito"></b></div>
+        
+        <script>
+
+            var txtNome = document.getElementById('textNome');
+
+            function escreve(){
+                var nome = txtNome.value;
+                document.querySelector("#msg").innerHTML = 'Bem-Vindo, <b>'  + nome + '</b>';
+
+                
+            };
+        </script>
+    </body>
+</html>

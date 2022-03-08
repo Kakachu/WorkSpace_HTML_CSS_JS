@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <div id="msg"><b id="negrito"></b></div>
+
+        <script>
+            (function(){
+                var nome = prompt('Digite seu nome: ');
+                document.querySelector("#msg").innerHTML = 'Bem-Vindo, <b>'  + nome + '</b>';
+
+            })();
+        </script>
+    </body>
+</html>
