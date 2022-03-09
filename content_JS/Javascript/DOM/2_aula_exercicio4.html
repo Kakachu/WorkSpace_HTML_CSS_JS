@@ -11,7 +11,7 @@
     <body>
         <h1>Curso Javascript Completo</h1>
 
-        <b><input type="text" id="textNome" value="" disabled>
+        <b><input type="text" id="textNome" value="">
         
         <script>
             var $txt = document.querySelector('#textNome');
@@ -19,6 +19,7 @@
             var sobrenome = 'Jardim Da Silva';
 
             document.querySelector("#textNome").value = nome + sobrenome;
+            document.querySelector("#textNome").disabled = true;
         </script>
     </body>
 </html>
