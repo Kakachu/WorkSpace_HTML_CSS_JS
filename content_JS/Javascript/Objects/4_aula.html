@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <script>
+
+            var Caneta = (function(window){
+                'use strict'
+                function _caneta(preco, cor){
+
+                var color = cor || 'black';
+                this.preco = preco || 1;
+                this.mudarCor = function(cor){
+                    if(cor != 'red' && cor != 'blue' && cor != 'black'){
+                        return;
+                    }
+                    color = cor;
+                }
+                
+                this.pegaCor = function(){
+                    return(color);
+                }
+            }
+
+            return _caneta; 
+            })(window)
+        </script>
+    </body>
+</html>

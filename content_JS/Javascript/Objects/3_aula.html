@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <script>
+            var hoje = new Date();
+
+            var x = [0];
+
+            function mudaX(x){
+                var y = x;
+                y.push(2);
+                x.push(3);
+            }
+
+            mudaX(x);
+
+            console.log('------------');
+
+            var n = 0;
+
+            function mudaN(n){
+                var n2 = n;
+                console.log(++n2);
+            }
+
+            mudaN(n);
+            console.log(n);
+
+            console.log('------------');
+
+            var caneta = {
+                cor : 'red',
+                mudarCor: function(cor){
+                    this.cor = cor;
+                }
+            }
+
+            caneta.mudarCor('green');
+            console.log(caneta);
+        </script>
+    </body>
+</html>
