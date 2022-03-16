@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <form action="#"></form>
+
+        <textarea cols="50" rows="10" readonly>Contrato De Serviços Prestados</textarea>
+        <br>
+        <label>
+            <input id="check" type="checkbox" checked> Li e aceito os termos do Contrato
+        </label>
+        <br>
+        <input id="btn" type="submit" value="Continuar">
+
+        <script>
+            (function(){
+                'use strict'
+
+                var $btn = document.getElementById('btn');
+                var $check = document.getElementById('check')
+
+                toggleBtn();
+
+                $check.addEventListener('change', function(){
+                    toggleBtn();
+                });
+
+                function toggleBtn(){
+                    $btn.disabled = !$check.checked;
+                }
+            })();
+        </script>
+    </body>
+</html>

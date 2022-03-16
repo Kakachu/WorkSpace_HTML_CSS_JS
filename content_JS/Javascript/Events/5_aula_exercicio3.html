@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <textarea id="msg" cols="50" rows="10" maxlength="150"></textarea>
+        <div id="resta-container" style="display: none;">
+            Restam <span id="resta"></span> caracteres
+        </div>
+        
+
+        <script>
+            (function(){
+                'use strict'
+
+                var $txtMsg = document.getElementById('msg');
+                var $restaContainer = document.getElementById('resta-container');
+                var $resta = document.getElementById('resta');
+                var maxima = $txtMsg.maxLength;
+
+                function mostrarRestaContainer(){
+                    $restaContainer.style.display = 'block';
+                }
+
+                mostrarRestaContainer();
+
+                mostrarCaracteresRestantes(maxima);
+
+                $txtMsg.addEventListener('input', verificarQuantidade);
+
+                function verificarQuantidade(e){
+                    var numeroLetras = this.value.length;
+                    var caracteresRestantes = parseInt(maxima) - parseInt(numeroLetras);
+                    mostrarCaracteresRestantes(caracteresRestantes);
+                }
+
+                function mostrarCaracteresRestantes(n){
+                    $resta.textContent = n;
+                }
+            })();
+            
+        </script>
+    </body>
+</html>

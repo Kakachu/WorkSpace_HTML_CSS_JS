@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+
+        <button>botão 1</button>
+        <button>botão 2</button>
+        <button>botão 3</button>
+        <script>
+            (function(){
+                'use strict'
+                
+                var $btn = document.getElementsByTagName('button');
+                
+                for(var i = 0; i < $btn.length; i++){
+                    $btn[i].addEventListener('click', clicou)
+                }
+
+                function clicou(){
+                    console.log(this.textContent)
+                }
+            })();
+        </script>
+    </body>
+</html>
