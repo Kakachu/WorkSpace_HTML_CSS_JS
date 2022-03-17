@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+
+        <style>
+            .done{
+                text-decoration: line-through;
+                color: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <input type="text" id="txtTask">
+        <button id="btn">Cadastrar Tarefa</button>
+        <ul>
+            <li>estudar Javascript - DOM</li>
+            <li>estudar Eventos Javascript</li>
+            <li>jogar video-games</li>
+        </ul>
+        <script>
+            (function(){
+                'use strict';
+
+                var $ul = document.querySelector('ul');
+                var $txtTask = document.querySelector('#txtTask');
+                var $btn = document.querySelector('#btn');
+                var $lis = $ul.querySelectorAll('li');
+
+                $btn.addEventListener('click', addTask);
+                $txtTask.addEventListener('keyup', function(e){
+                    if(e.keyCode == 13){
+                        addTask();
+                    }
+                });
+
+                for(var i = 0; i < $lis.length; i++){
+                    $lis[i].addEventListener('click', toggleDone);
+                }
+
+                function toggleDone(){
+                    this.classList.toggle('done');
+                }
+
+                function addTask(){
+                    var task = '<li>' + $txtTask.value + '</li>';
+                    $ul.innerHTML += task;
+
+                    $txtTask.value = '';
+                    $txtTask.focus();
+                }
+            })();
+        </script>
+    </body>
+</html>
