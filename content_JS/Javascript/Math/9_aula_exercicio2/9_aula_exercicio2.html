@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>                    
+(function(){
+    window.addEventListener('load', init);
+
+    function init(){
+        var nSorteado = Math.random();
+        nSorteado = nSorteado * 6;
+        nSorteado = Math.floor(nSorteado);
+        if(nSorteado == 0){
+            nSorteado = nSorteado + 1;
+        }
+        console.log(nSorteado)
+        
+
+        document.querySelector('body').style.background = "url(images/" + nSorteado + ".jpg)";
+    }
+})()
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1> 
+        
+        <script src=beluga.js></script>
+        
+    </body>
+</html>
