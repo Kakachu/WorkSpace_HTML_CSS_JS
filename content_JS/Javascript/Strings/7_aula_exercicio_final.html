@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+
+        <script>
+            (function(){
+                window.addEventListener('load', init);
+                
+                function init(){
+                    var $paragrafos = document.querySelectorAll('p');
+
+                    var x = 0;
+                    while($paragrafos[x]){
+                        $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                        x++;
+                    }
+                }
+                
+                function formatarTexto(texto){
+                    var maximoCaracteres = 200;
+                    if(texto.length <= maximoCaracteres){
+                        return texto;
+                    }
+                        
+                    var subTexto = texto.slice(0, maximoCaracteres);
+                    return subTexto + '...';
+
+                }
+            })();
+        </script>
+
+        <h1>Curso Javascript Completo</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        
+        <p>Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.
+        Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.</p>
+
+        <p>Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.
+        Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.</p>
+
+        <p>Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.
+        Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.</p>
+
+        <p>Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.
+        Ainda no século XIX surgiu a discussão em torno da natureza dos fenômenos históricos.
+        A que espécie de preponderância estariam ligados? Aos agentes de ordem espiritual ou aos de ordem material?
+        Antes disso, a fundamental teológica fez uma festa na mente cordata do povo.</p>
+
+    </body>
+</html>
