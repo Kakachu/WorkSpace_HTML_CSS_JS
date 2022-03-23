@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <script>
+            var arr = ['1', 2, 3, 4, 5, 20];
+
+            var soNumeros = arr.every( function(element){
+                return typeof element == 'number'; 
+            });
+
+            var umNumero = arr.some( function(element){
+                return typeof element == 'number'; 
+            });
+            
+            var numeros = arr.filter( function(element){
+                return typeof element == 'number'; 
+            });
+
+            arr.forEach(function(element, i, arr){
+                console.log('el=', element, ' | i=',i, ' | i -', arr.toString());
+            });
+
+            var posicaoString = arr.indexOf('lol'); 
+            var ultimaPosicaoString = arr.lastIndexOf(20); 
+
+            console.log(soNumeros);
+            console.log(umNumero);
+            console.log(numeros);
+            console.log('Poisição da string = ', posicaoString);
+            console.log('Poisição da string = ', ultimaPosicaoString);
+
+            console.log(numeros);
+            numeros = arr.map(function(element, i, arr){
+                return element * i;
+            });
+            console.log(numeros);
+
+            var arr2 = arr.concat(numeros, 'ola', 'arr2', 100);
+            console.log(arr2);
+
+            var str = arr2.join('--');
+            console.log(str)
+
+            arr.push('novo item');
+            console.log(arr);
+
+            var ultimoItem = arr.pop();
+            console.log(ultimoItem);
+            console.log(arr);
+
+            var primeiroItem = arr.shift();
+            console.log(typeof primeiroItem);
+            console.log(arr);
+
+            arr.unshift(true, false, 'unshift');
+            console.log(arr);
+
+            numeros.shift();
+            var somaArray = numeros.reduce(function(anterior, atual, i){
+                console.log('anterior', anterior, ' | atual', atual, ' | i', i)
+                return anterior + atual + i;
+            }, 10);
+
+            console.log(numeros);
+            console.log(somaArray);
+            
+            var testeReduce = ['1', '2', '3', '4', '5'].reduceRight(function(i, a){
+                return i + a;
+            });
+            console.log(testeReduce)
+
+            var arr = [1, 20, 30, 50];
+            arr.reverse();
+            console.log(arr);
+
+            console.log(arr2.slice(2, 5));
+
+            console.log('-----')
+            console.log(arr2);
+            var arr3 = arr2.splice(2 , 3, 'limao', 'melao');
+            console.log(arr2);
+        </script>
+    </body>
+</html>
