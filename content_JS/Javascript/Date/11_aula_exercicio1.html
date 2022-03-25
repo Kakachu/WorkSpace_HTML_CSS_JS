@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <script>
+            (function(){
+                var dataAtual = new Date();
+                dataAtual.setHours(0);
+                dataAtual.setMinutes(0);
+                dataAtual.setSeconds(0);
+                dataAtual.setMilliseconds(0);
+                var anoAtual = dataAtual.getFullYear();
+
+                var dataNiver = new Date(anoAtual, 2, 25);
+
+                var dataAtualTS = dataAtual.getTime();
+                var dataNiverTS = dataNiver.getTime();
+
+                if(dataNiverTS == dataAtualTS){
+                    alert('Parabéns hoje é seu aniversário');
+                    return;
+                }
+
+                if(dataNiverTS < dataAtualTS){
+                    dataNiver.setFullYear(++anoAtual);
+                    dataNiverTS = dataNiver.getTime();
+                }
+
+                const UM_DIA_TS = 24 * 60 * 60 * 1000;
+                var diferenca = dataNiverTS - dataAtualTS;
+                console.log(diferenca / UM_DIA_TS);
+
+
+            })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <div></div>
+        <script>
+            var div = document.querySelector('div');
+            var n = 0;
+            
+            function somarUm(){
+                console.log('n', ++n);
+                if(n >= 10){
+                    clearInterval(intervalo)
+                }
+            }
+
+            var timeout = setTimeout(somarUm, 1000);
+            var intervalo = setInterval(somarUm, 1000);
+
+            console.log(intervalo)
+
+            var timeoutTeste = setTimeout(function(){
+                for(var i = 0; i < 1000; i++){
+                    str = "i: " + i + " -- "
+                    div.textContent += str;
+                }
+            }, 3000)
+        </script>
+    </body>
+</html>
