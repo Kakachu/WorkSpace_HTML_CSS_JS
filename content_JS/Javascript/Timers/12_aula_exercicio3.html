@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+        
+        
+    </head>
+    <body>
+        <h1>Javascript Completo</h1>
+        
+        <input type="text" id="cronometro">
+        <button id="iniciar">Iniciar</button>
+        <button id="pausar">Pausar</button>
+        <button id="parar">Parar</button>
+        
+        <script>
+            
+            (function(){
+                var $cronometro = document.querySelector('#cronometro');
+                var $iniciar = document.querySelector('#iniciar');
+                var $pausar = document.querySelector('#pausar');
+                var $parar = document.querySelector('#parar');
+                
+                var intervalo = null;
+                var timeElapsed = 0;
+                var timeNowClick = 0;
+                var timePauseClick = 0;
+                var rodando = false;
+                
+                $iniciar.addEventListener('click', iniciar);
+                $pausar.addEventListener('click', pausar);
+                $parar.addEventListener('click', parar);
+                   
+                function iniciar(){
+                    if(rodando){
+                        return;
+                    }
+                    parar();
+                    timeNowClick = Date.now();
+                    iniciarCronometro();
+                    rodando = true;
+                }
+
+                function pausar(){
+                    if(!$cronometro.value)return;
+                    if(rodando){
+                        clearInterval(intervalo);
+                        timePauseClick = Date.now();
+                        timeElapsed += (timePauseClick - timeNowClick)
+                    }
+                    else{
+                        timeNowClick = Date.now();
+                        iniciarCronometro(timeElapsed);
+                    }
+                    rodando = !rodando;
+                }
+
+                function parar(){
+                    timeNowClick = 0;
+                    timePauseClick = 0;
+                    timeElapsed = 0;
+                    $cronometro.value = '';
+                    rodando = false;
+                    clearInterval(intervalo);
+                }
+
+                function iniciarCronometro(timeElapsed){
+                    var _elapse = timeElapsed || 0;
+                    intervalo = setInterval(function(){
+                        var timeNowStart = Date.now();
+                        var diffStart = timeNowStart - timeNowClick;
+                        $cronometro.value = formataMs(diffStart + _elapse);
+                    }, 100)
+                    
+                }
+
+                function formataMs(ms){
+                    const MINUTO = 60 * 1000;
+                    
+
+                    if(ms < 1000){
+                        return(ms)
+                    }
+                    else if(ms < MINUTO){
+                        var s = ms/1000;
+                        s = parseInt(s);
+
+                        var c = ms - (s * 1000);
+                        return s + ':' + c;
+                    }
+                    else{
+                        var m = ms / (MINUTO);
+                        m = parseInt(m);
+
+                        return m + ':' + formataMs(ms - m * MINUTO)
+                    }
+                }
+            })()
+            
+        </script>
+    </body>
+</html>
