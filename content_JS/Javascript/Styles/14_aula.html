@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Curso Javascript Completo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Kauã">
+        <meta name="description" content="feito por mim">
+        <meta name="keywords" content="lógica">      
+
+        <style>
+            .teste{
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Curso Javascript Completo</h1>
+
+        <div class="teste">apenas um teste</div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+
+        <div class="teste2">apenas um teste</div>
+
+        <script>
+            var $teste = document.querySelector('.teste');
+            var $teste2 = document.querySelector('.teste2')
+            var $p = document.querySelector('p');
+           
+            console.log($teste.style.background)
+
+            
+
+            console.log('computado ', getComputedStyle($teste).background)
+
+            console.log($p.offsetHeight, $p.offsetWidth);
+            console.log($p.offsetLeft, $p.offsetTop);
+
+            console.log($teste2.offsetLeft, $teste2.offsetTop);
+            console.log($teste2.getBoundingClientRect());
+        </script>
+    </body>
+</html>
